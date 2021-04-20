@@ -66,7 +66,7 @@ const pool = stratum.createPool({
     //     disableTransactions: true
     //
     // }
-}, (ip, port , workerName, password, callback) => {
+}, function (ip, port , workerName, password, callback) {
     console.log("Authorize " + workerName + ":" + password + "@" + ip);
     callback({
         error: null,
