@@ -43,12 +43,14 @@ const pool = stratum.createPool({
             diff: 256
         }
     },
-    daemons: {
-        host: "127.0.0.1",
-        port: 8332,
-        user: "bitcoin",
-        password: "testing"
-    },
+    daemons: [
+        {
+            host: "127.0.0.1",
+            port: 8332,
+            user: "bitcoin",
+            password: "testing"
+        }
+    ],
     // p2p: {
     //     enabled: false,
     //
