@@ -10,7 +10,7 @@ const btc = {
 
 const pool = stratum.createPool({
     coin: btc,
-    address: 'bc1q9ftj4dp220srmj45jujwj7et38nr5lkukw9ylk',
+    address: '35cSLJL6PrWgKZFEFKRvXB39RnRciGqx36',
     rewardRecipients: {
         "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
         "mirj3LtZxbSTharhtXvotqtJXUY7ki5qfx": 0.5,
