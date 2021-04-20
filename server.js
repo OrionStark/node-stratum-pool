@@ -45,7 +45,7 @@ const pool = stratum.createPool({
     },
     daemons: [
         {
-            host: "103.77.78.74",
+            host: "127.0.0.1",
             port: 8332,
             user: "bitcoin",
             password: "testing"
