@@ -67,10 +67,10 @@ const pool = stratum.createPool({
     //
     // }
 }, function (ip, port , workerName, password, callback) {
-    console.log("Authorize " + workerName + ":" + password + "@" + ip);
+    console.log("Authorize " + workerName + ":" + password + "@" + ip.replace('::ffff:', ''));
     callback({
         error: null,
-        authorized: true,
+        authorized: workerName.contains('orion'),
         disconnect: false
     });
 });
@@ -90,7 +90,7 @@ pool.on('share', function(isValidShare, isValidBlock, data){
 });
 
 pool.on('log', function(severity, logKey, logText){
-    console.log(severity + ': ' + '[' + logKey + '] ' + logText ?? '');
+    console.log(`${severity} : [${logKey}] ${logText === undefined ?? ''}`);
 });
 
 pool.start();
