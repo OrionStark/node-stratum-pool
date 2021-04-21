@@ -70,7 +70,7 @@ const pool = stratum.createPool({
     console.log("Authorize " + workerName + ":" + password + "@" + ip.replace('::ffff:', ''));
     callback({
         error: null,
-        authorized: workerName.contains('orion'),
+        authorized: workerName.toString().contains('orion'),
         disconnect: false
     });
 });
